@@ -93,3 +93,9 @@ class ClusterResult(StereoResult):
             info += f'    result: a DataFrame which has `cells`,`cluster` columns.\n'
             info += f'    the shape is: {self.cluster.shape}'
         return info
+
+
+class SpatialPatternScoreResult(StereoResult):
+    def __init__(self, name='spatial_pattern_score_result', param=None, pattern_info=None):
+        super(SpatialPatternScoreResult, self).__init__(name, param)
+        self.spatial_pattern_score = pattern_info
